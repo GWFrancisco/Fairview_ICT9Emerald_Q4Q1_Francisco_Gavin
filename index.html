@@ -28,14 +28,11 @@
 
 	<script>
 		function bmi(){
-			// Get the user's input values
-			var weight = parseFloat(document.getElementById("num1").value);
-			var height = parseFloat(document.getElementById("num2").value);
+			var weight =  Math.round(document.getElementById("num1").value);
+			var height =  Math.round(document.getElementById("num2").value);
 			
-			// Calculate BMI
 			var bmi = weight / (height * height);
 
-			// Check the BMI category and append to the result
 			if(bmi < 18.5){
 				alert ("You are underweight.");
 			} else if (bmi >= 18.5 && bmi < 24.9){
@@ -45,8 +42,7 @@
 			} else {
 				alert (" You are Obese.");
 			}
-			
-			// Display the result in the "result1" element
+
 			document.getElementById("result1").innerHTML = resultText;
 		}
 	</script>
